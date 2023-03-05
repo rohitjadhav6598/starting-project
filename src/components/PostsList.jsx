@@ -6,20 +6,6 @@ import { useLoaderData } from "react-router-dom";
 function PostsList() {
 
   const posts = useLoaderData();
-  const [count, setCount] = useState(0);
-
-  function addPostHandler(postData) {
-    fetch("http://localhost:8080/posts", {
-      method: "POST",
-      body: JSON.stringify(postData),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-    postData.id = count;
-    setCount(count + 1);
-    setPosts((existinngPosts) => [postData, ...existinngPosts]);
-  }
 
   function removePostHandler(id) {
     setPosts((existinngPosts) =>
