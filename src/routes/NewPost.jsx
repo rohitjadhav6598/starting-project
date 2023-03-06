@@ -1,5 +1,4 @@
 import classes from "./NewPost.module.css";
-import { useState } from "react";
 import Modal from "../components/Modal";
 import { Form, Link, redirect } from "react-router-dom";
 
